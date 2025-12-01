@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIZ - Asosiy Sahifa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-title { font-family: 'Playfair Display', serif; }
+        .gradient-text { background: linear-gradient(135deg, #4A90E2, #7ED321); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        
+
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="BIZ LOGO.png" alt="BIZ Logo" class="w-10 h-10 mr-3">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="main.html" class="text-blue-500 font-semibold border-b-2 border-blue-500 pb-1">Bosh sahifa</a>
+                    <a href="#directions" class="text-gray-600">Yo'nalishlar</a>
+                    <a href="forum.html" class="text-gray-600">Forum</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-600">Salom, Foydalanuvchi!</span>
+                    <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-lg text-sm">Chiqish</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 flex items-center justify-center">
+        <div class="text-center max-w-3xl">
+            <h1 class="hero-title text-5xl font-bold mb-6">Kelajak sizlarga bog'liq!</h1>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <blockquote class="text-lg leading-relaxed italic">
+                    "Sizlar bilan uchrashish, taklif va tashabbuslaringizni eshitish menga har doim quvonch va g'urur bag'ishlaydi. Shijoat va intilishingizni ko'rib, yonib turgan ko'zlaringizga boqib, o'zimga bitmas-tuganmas kuch olaman. Sizlar mana shunday katta kuch-qudrat egasisizlar."
+                </blockquote>
+                <p class="text-sm mt-4 opacity-80">Shavkat Mirziyoyev</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="directions" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl font-bold text-gray-800 mb-4">Asosiy Yo'nalishlar</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Zamonaviy kasblarni o'rganing, o'zingizni namoyish eting va kelajagingizni qurishing
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="direction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-6xl mb-4">🎬</div>
+                            <h3 class="text-2xl font-bold">Video Montaj</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Videolarni professional tarzda tahrirlash, effekt va animatsiyalar qo'shish san'atini o'rganing.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 25+ video dars</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Amaliy topshiriqlar</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Forum muhokamalari</li>
+                        </ul>
+                        <a href="video-editing.html" class="block w-full bg-red-500 text-white text-center py-3 rounded-lg font-semibold">
+                            Boshlash
+                        </a>
+                    </div>
+                </div>
+
+                <div class="direction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-6xl mb-4">🎨</div>
+                            <h3 class="text-2xl font-bold">Grafik Dizayn</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Logotiplar, posterlar va brending uchun professional dizayn yaratishni o'rganing.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 30+ video dars</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Adobe Creative Suite</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Portfolio yaratish</li>
+                        </ul>
+                        <a href="graphic-design.html" class="block w-full bg-purple-500 text-white text-center py-3 rounded-lg font-semibold">
+                            Boshlash
+                        </a>
+                    </div>
+                </div>
+
+                <div class="direction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-6xl mb-4">📈</div>
+                            <h3 class="text-2xl font-bold">Treyding</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Moliyaviy bozorlarni tushunish, treyding strategiyalari va boshqarishni o'rganing.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 20+ video dars</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Real bozor tahlili</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Xavfsizlik strategiyalari</li>
+                        </ul>
+                        <a href="trading.html" class="block w-full bg-green-500 text-white text-center py-3 rounded-lg font-semibold">
+                            Boshlash
+                        </a>
+                    </div>
+                </div>
+
+                <div class="direction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-6xl mb-4">📱</div>
+                            <h3 class="text-2xl font-bold">SMM</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Ijtimoiy tarmoqlar marketingi, brending va auditoriyani jalb qilishni o'rganing.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 35+ video dars</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Platforma strategiyalari</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Analytics va ROI</li>
+                        </ul>
+                        <div class="mt-12 flex flex-col items-center justify-center">
+                            <a href="smm.html" class="block w-full bg-blue-500 text-white text-center py-3 rounded-lg font-semibold">
+                                Boshlash
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center text-center">
+                <div class="mb-6">
+                    <h2 class="hero-title text-4xl font-bold text-gray-800 mb-4">Nima uchun BIZ?</h2>
+                    <p class="text-gray-600">Platformamiz yoshlarning rivojlanishiga yo'naltirilgan innovatsion yondashuvga ega</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">🎯 Maqsadga yo'naltirilgan</h3>
+                    <p class="text-gray-600">Har bir dars ma'lum maqsadga erishishga yo'naltirilgan. Siz o'rganayotgan har bir narsa kelajakdagi muvaffaqiyatingiz uchun muhim.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800">👥 Hamjamiyat</h3>
+                    <p class="text-gray-600">O'z fikringizni baham ko'ring, hamkasblaringiz bilan tanishing va birgalikda o'sing. Forumlar va guruhlar sizni kutmoqda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-6 mb-4">
+                    <a href="https://t.me/BIZ_Platform_Bot" class="text-blue-400">Telegram Bot</a>
+                    <a href="https://t.me/BiZ_with" class="text-blue-400">Telegram Channel</a>
+                    <a href="https://www.instagram.com/biz.with?utm_source=qr&igsh=MXF1OTVocWN1Nmp0bQ==" class="text-pink-400">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('userLoggedIn');
+            window.location.href = 'index.html';
+        }
+
+        if (!localStorage.getItem('userLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

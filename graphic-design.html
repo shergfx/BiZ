@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafik Dizayn - BIZ Platforma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-title { font-family: 'Playfair Display', serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #4A90E2, #7ED321);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+ 
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="BIZ LOGO.png" alt="BIZ Logo" class="w-10 h-10 mr-3">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="main.html" class="text-gray-600 hover:text-blue-500 transition-colors">Bosh sahifa</a>
+                    <a href="main.html#directions" class="text-blue-500 font-semibold border-b-2 border-blue-500 pb-1">Yo'nalishlar</a>
+                    <a href="forum.html" class="text-gray-600 hover:text-blue-500 transition-colors">Forum</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-600">Salom, Foydalanuvchi!</span>
+                    <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm transition-all">Chiqish</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16 flex items-center justify-center min-h-screen">
+    <div class="text-center max-w-2xl px-4">
+        <div class="flex items-center justify-center mb-6">
+            <span class="text-6xl mr-4">🎨</span>
+            <h1 class="hero-title text-5xl font-bold">Grafik Dizayn</h1>
+        </div>
+        <p class="text-xl mb-8 leading-relaxed">
+            Logotiplar, posterlar va brending uchun professional dizayn yaratishni o'rganing. 
+            Adobe Creative Suite dasturlarida ishlashni o'zlashtiring.
+        </p>
+        <div class="flex justify-center gap-4 mb-8">
+            <div class="bg-white/20 rounded-lg px-4 py-2">
+                <span class="font-bold text-xl">30</span>
+                <p class="text-sm">video dars</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <div class="container mx-auto px-4">
+
+            <div class="mb-16">
+                <h2 class="hero-title text-3xl font-bold text-gray-800 mb-8 text-center">O'quv Reja</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="lesson-card bg-white rounded-2xl shadow-lg p-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Asoslar</h3>
+                        <p class="text-gray-600 mb-4">Grafik dizaynning asosiy tamoyillari, ranglar psixologiyasi va kompozitsiya.</p>
+                        <div class="text-sm text-gray-500 mb-4">
+                            <p>10 ta dars • 3 soat</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">Bajarildi</span>
+                            <span class="text-sm text-gray-500">100% bajarildi</span>
+                        </div>
+                    </div>
+                    <div class="lesson-card bg-white rounded-2xl shadow-lg p-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">🛠️</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dasturiy ta'minot</h3>
+                        <p class="text-gray-600 mb-4">Photoshop, Illustrator va boshqa dasturlarni o'rganish.</p>
+                        <div class="text-sm text-gray-500 mb-4">
+                            <p>15 ta dars • 5 soat</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-semibold">Jarayonda</span>
+                            <span class="text-sm text-gray-500">8/15 bajarildi</span>
+                        </div>
+                    </div>
+                    <div class="lesson-card bg-white rounded-2xl shadow-lg p-6">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">💼</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Professional loyihalar</h3>
+                        <p class="text-gray-600 mb-4">Real loyihalar ustida ishlash va portfolio yaratish.</p>
+                        <div class="text-sm text-gray-500 mb-4">
+                            <p>5 ta dars • 4 soat</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 font-semibold">Yopiq</span>
+                            <span class="text-sm text-gray-500">0/5 bajarildi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-16">
+                <h2 class="hero-title text-3xl font-bold text-gray-800 mb-8">Oxirgi Darslar</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="lesson-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                            <span class="text-6xl text-white">▶️</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Dars 0: Adobe Photoshop</h3>
+                            <p class="text-gray-600 text-sm mb-4">kirish</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500">3 daqiqa</span>
+                                <a href="https://www.youtube.com/watch?v=odryytfLAAQ&list=PLtsdhYRN3uXf7-iEw-69RKPbASvd31lKg&index=1" target="_blank" rel="noopener noreferrer" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg text-sm transition-all inline-block">
+                                    Ko'rish
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                            <span class="text-6xl text-white">▶️</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Dars 1: Abode Photoshop Boshlovchilar uchun</h3>
+                            <p class="text-gray-600 text-sm mb-4">Start</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500">5 daqiqa</span>
+                                <a href="https://www.youtube.com/watch?v=dRUuD2R4xy0&list=PLtsdhYRN3uXf7-iEw-69RKPbASvd31lKg&index=2" target="_blank" rel="noopener noreferrer" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg text-sm transition-all inline-block">
+                                    Ko'rish
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                            <span class="text-6xl text-white">🔒</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Dars 2:  Move Tool | Adobe Photoshop |</h3>
+                            <p class="text-gray-600 text-sm mb-4">Vektor rasmlar yaratish va ulardan foydalanish.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500">23 daqiqa</span>
+                                <button class="bg-gray-400 text-white px-4 py-2 rounded-lg text-sm cursor-not-allowed">
+                                    Yopiq
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+     <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-6 mb-4">
+                    <a href="https://t.me/BIZ_Platform_Bot" class="text-blue-400 hover:text-blue-300 transition-colors">
+                        <span class="text-sm">🤖 Hamkorlik uchun bot</span>
+                    </a>
+                    <a href="https://t.me/BiZ_with" class="text-blue-400 hover:text-blue-300 transition-colors">
+                        <span class="text-2xl">📱</span>
+                    </a>
+                    <a href="https://www.instagram.com/biz.with?utm_source=qr&igsh=MXF1OTVocWN1Nmp0bQ==" class="text-pink-400 hover:text-pink-300 transition-colors">
+                        <span class="text-2xl">📷</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

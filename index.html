@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIZ - Kirish va Ro'yxatdan o'tish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+
+<div class="container mx-auto px-4 py-8 max-w-xl">
+    <div class="bg-white p-8 rounded-2xl shadow-xl">
+
+        <h1 class="text-3xl font-bold text-center mb-6">BIZ Platformasi</h1>
+
+        <!-- TABS -->
+        <div class="flex mb-8 bg-gray-100 rounded-lg p-1">
+            <button id="loginTab" class="flex-1 py-3 rounded-md bg-blue-500 text-white font-semibold">
+                Kirish
+            </button>
+            <button id="registerTab" class="flex-1 py-3 rounded-md text-gray-600 font-semibold">
+                Ro'yxatdan o'tish
+            </button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label class="block text-sm font-medium">Email</label>
+                <input id="loginEmail" type="email"
+                       class="w-full px-4 py-3 border rounded-lg" placeholder="email@example.com">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Parol</label>
+                <input id="loginPassword" type="password"
+                       class="w-full px-4 py-3 border rounded-lg" placeholder="********">
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+                Kirish
+            </button>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="registerForm" class="space-y-6 hidden">
+
+            <div>
+                <label class="block text-sm font-medium">Ism</label>
+                <input id="regFirstname" type="text" class="w-full px-4 py-3 border rounded-lg" placeholder="Ismingiz">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Familiya</label>
+                <input id="regLastname" type="text" class="w-full px-4 py-3 border rounded-lg" placeholder="Familiyangiz">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Telefon</label>
+                <input id="regPhone" type="text" class="w-full px-4 py-3 border rounded-lg" placeholder="+998 XX XXX XX XX">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Email</label>
+                <input id="regEmail" type="email" class="w-full px-4 py-3 border rounded-lg" placeholder="email@example.com">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Parol</label>
+                <input id="regPassword" type="password" class="w-full px-4 py-3 border rounded-lg" placeholder="********">
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600">
+                Ro'yxatdan o'tish
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<script>
+const loginTab = document.getElementById("loginTab");
+const registerTab = document.getElementById("registerTab");
+
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+
+loginTab.onclick = () => {
+    loginTab.classList.add("bg-blue-500", "text-white");
+    registerTab.classList.remove("bg-green-500", "text-white");
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
+};
+
+registerTab.onclick = () => {
+    registerTab.classList.add("bg-green-500", "text-white");
+    loginTab.classList.remove("bg-blue-500", "text-white");
+    registerForm.classList.remove("hidden");
+    loginForm.classList.add("hidden");
+};
+
+// LOGIN
+loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
+
+    const res = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }) 
+    });
+
+    const data = await res.json();
+    alert(data.msg);
+
+    if (res.status === 200) {
+        localStorage.setItem("userLoggedIn", "true");
+        window.location.href = "main.html";
+    }
+});
+
+// REGISTER
+registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    let firstname = document.getElementById("regFirstname").value;
+    let lastname = document.getElementById("regLastname").value;
+    let phone = document.getElementById("regPhone").value;
+    let email = document.getElementById("regEmail").value;
+    let password = document.getElementById("regPassword").value;
+
+    const res = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            firstname,
+            lastname,
+            phone,
+            email,
+            password   // ✔ to‘g‘rilandi
+        })
+    });
+
+    const data = await res.json();
+    alert(data.msg);
+});
+</script>
+
+
+</body>
+</html>
